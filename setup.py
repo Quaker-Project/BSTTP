@@ -1,17 +1,10 @@
-import sys
-import os
-
-# Añadir carpeta raíz del proyecto al path para poder importar 'bstpp' en modo editable
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-from bstpp.main import Hawkes_Model
-
-
 from setuptools import setup, find_packages
 
+# Leer descripción larga desde README.md
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
+# Dependencias
 modules = [
     "dill>=0.3.5.1",
     "geopandas>=0.14.0",
@@ -28,7 +21,8 @@ modules = [
     "pyparsing>=3.0.9",
     "scipy>=1.9.0",
     "six>=1.16.0",
-    "tqdm>=4.64.0"
+    "tqdm>=4.64.0",
+    "streamlit>=1.24.0"  # para ejecutar la app
 ]
 
 setup(
