@@ -1,3 +1,12 @@
+import sys
+import os
+
+# Añadir carpeta raíz del proyecto al path para poder importar 'bstpp' en modo editable
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from bstpp.main import Hawkes_Model
+
+
 from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as f:
